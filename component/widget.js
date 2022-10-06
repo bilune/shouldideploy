@@ -56,18 +56,45 @@ export default class Widget extends React.Component {
   }
 
   /**
+   * Get reasons according to current time
+   * @param {string} reason
+   * @return void
+   */
+  parseReason(reason) {
+    if (reason.endsWith('.jpeg')) {
+      // eslint-disable-next-line @next/next/no-img-element
+      return <img className="" alt="" src={reason} />
+    }
+
+    if (reason.includes('youtube.com/embed')) {
+      return (
+        <iframe
+          width="560"
+          height="315"
+          src={reason}
+          title="YouTube video player"
+          frameborder="0"
+          allowfullscreen
+        />
+      )
+    }
+
+    return reason
+  }
+
+  /**
    * Render widget
    * @return JSX.Element
    */
   render() {
     return (
       <div className="item">
-        <h3 className="tagline">Should I Deploy Today?</h3>
-        <h2 id="text" className="reason">
-          {this.state.reason}
-        </h2>
+        <h3 className="tagline">¿Puedo deployar?</h3>
+        <div id="text" className="reason">
+          {this.parseReason(this.state.reason)}
+        </div>
         <span id="reload" onClick={this.onSpacePressOrClick}>
-          Hit <span className="space-btn">Space</span> or Click
+          <span className="space-btn">Espacio</span> o Click
         </span>
       </div>
     )
