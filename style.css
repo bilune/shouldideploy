@@ -200,7 +200,7 @@ ul.footer-list select {
   width: 100%;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 600px) {
   .reason {
     padding: 0 2rem;
   }
