@@ -8,13 +8,12 @@ export const REASONS_TO_DEPLOY = [
   'https://www.youtube.com/embed/_RpQSJgZdrI'
 ]
 
-export const REASONS_TO_NOT_DEPLOY = REASONS_TO_DEPLOY
-
-// export const REASONS_TO_NOT_DEPLOY = [
-//   'Só loquito vo?',
-//   'sideeyechloe.jpeg',
-//   'Nop'
-// ]
+export const REASONS_TO_NOT_DEPLOY = [
+   'Só loquito vo?',
+   'sideeyechloe.jpeg',
+   'Nop',
+   'Andá a dormir'
+ ]
 
 export const REASONS_FOR_THURSDAY_AFTERNOON = REASONS_TO_NOT_DEPLOY
 
